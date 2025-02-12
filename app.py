@@ -6,18 +6,7 @@ app = Flask(__name__)
 app.secret_key = "7845036121"  # Change this to a secure key
 
 # MongoDB Atlas Connection
-client = MongoClient("mongodb+srv://kuhanm:nahuk4002@cluster0.uagdz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", tls=True, tlsAllowInvalidCertificates=True)  # Replace with your actual connection string
-db = client["user_auth"]
-users_collection = db["users"]
-from flask import Flask, render_template, request, redirect, url_for, session, flash
-from werkzeug.security import generate_password_hash, check_password_hash
-from pymongo import MongoClient
-
-app = Flask(__name__)
-app.secret_key = "your_secret_key"
-
-# Connect to MongoDB Atlas
-client = MongoClient("your_mongodb_connection_string")
+client = MongoClient("mongodb+srv://kuhanm:*****@cluster0.uagdz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", tls=True, tlsAllowInvalidCertificates=True)  # Replace with your actual connection string
 db = client["user_auth"]
 users_collection = db["users"]
 
