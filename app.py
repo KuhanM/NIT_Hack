@@ -36,8 +36,8 @@ def signup():
 
 @app.route('/signin', methods=['POST'])
 def signin():
-    email = request.form.get('loginEmail')
-    password = request.form.get('loginPassword')
+    email = request.form.get('email')
+    password = request.form.get('password')
 
     # Find user in database
     user = users_collection.find_one({'email': email})
